@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div class="get-number-wrap">
+        <!-- <div class="get-number-wrap">
             <p class="get-number-wrap_title">
                 <img src="{{ URL::asset('assets/images/ban-chua-co-so.png') }}" alt="">
             </p>
@@ -31,7 +31,7 @@
                 <span>NHẬN TẠI ĐÂY</span>
             </a>
             <p class="get-number-wrap_text">CHỊU KHÓ QUAY TAY VẬN MAY SẼ ĐẾN</p>
-        </div>
+        </div> -->
     </div>
 </div> 
 @stop
