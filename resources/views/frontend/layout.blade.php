@@ -37,15 +37,9 @@
     <![endif]-->
     {!! $settingArr['google_analystic'] !!}
 </head>
-
-<body @if($routeName != 'home') class="kl_child" @else id="kl_home" @endif @if($routeName == "thuong-game-khung") id="kl_bonus_game" @endif>  
-    @if($routeName != "thuong-game-khung")
-        @include('frontend.partials.header-v2')    
-    @endif
-    <div id="Zoom">    
-        @if($routeName == "thuong-game-khung")
-            @include('frontend.partials.header-v2')    
-        @endif
+<body @if($routeName != 'home') class="kl_child" @else id="kl_home" @endif @if($routeName == "thuong-game-khung") id="kl_bonus_game" @endif>
+    @include('frontend.partials.header-v2') 
+    <div id="Zoom">
         @if($routeName == "home")
         <div class="kl_background_home">            
             <div class="wrapper">                       
