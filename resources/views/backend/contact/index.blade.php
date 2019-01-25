@@ -69,7 +69,8 @@
            
               <th width="250">Họ tên</th>              
               <th>Email</th>
-              <th>Số điện thoại</th>              
+              <th>Số điện thoại</th>
+              <th>Page</th>              
               <th width="10%">Thời gian gửi</th>
              
               <th width="1%;" style="white-space:nowrap">Thao tác</th>
@@ -99,7 +100,19 @@
                   {{ $item->phone }}</br>
                   @endif
                 </td>
-                
+                <td>
+                  @if($item->route=='home')
+                  Trang chủ
+                  @elseif($item->route=='diem-nhan')
+                  Điểm nhấn
+                  @elseif($item->route=='iphone')
+                  Sự kiện iphone XS max
+                  @elseif($item->route=='tranh-tai')
+                  Tranh tài 150 triệu
+                  @elseif($item->route=='ban-ca')
+                  Bắn cá cực vui
+                  @endif
+                </td>
                 <td style="white-space:nowrap">{{ date('d-m-Y H:i', strtotime($item->created_at)) }}</td>
                
                 <td style="white-space:nowrap;text-align: right;">                  
