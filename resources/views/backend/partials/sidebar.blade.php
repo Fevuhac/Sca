@@ -15,6 +15,12 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>   
+      <li class="{{ in_array(\Request::route()->getName(), ['contact.index']) ? 'active' : '' }}">
+        <a href="{{ route('contact.index') }}">
+          <i class="fa fa-pencil-square-o"></i>
+          <span>Liên hệ</span>
+        </a>
+      </li>
       <li class="treeview {{ in_array(\Request::route()->getName(), ['gift-code.index', 'gift-code.create', 'gift-code.edit']) ? 'active' : '' }}">
         <a href="#">
           <i class="fa fa-pencil-square-o"></i> 
