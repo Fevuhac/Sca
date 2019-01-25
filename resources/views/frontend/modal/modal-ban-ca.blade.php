@@ -1,4 +1,4 @@
-<div class="modal fade" id="showForm" tabindex="-1" role="dialog" aria-labelledby="showForm">
+<div class="modal fade kl_activeLoad" id="showForm" tabindex="-1" role="dialog" aria-labelledby="showForm">
     <div class="modal-dialog modal-dialog-centered kl_modal" role="document">
         <div class="modal-content">
             <div class="kl_modal_shoot-fish">

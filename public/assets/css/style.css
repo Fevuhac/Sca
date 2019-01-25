@@ -1526,6 +1526,7 @@ h1, h2, h3, h4, h5, h6, p {
 @media (min-width: 1600px) {
     .main {
         width: 1600px;
+        height: 100vh;
     }
 }
 
@@ -1533,16 +1534,18 @@ h1, h2, h3, h4, h5, h6, p {
     position: relative;
     margin: 0 auto;
     overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 100vh;
 }
 .kl_highlight-left {
     float: left;
     width: 414px;
-    padding: 10px 30px;
+    padding: 10px 30px 50px;
     position: relative;
     -moz-box-shadow: 4px 0 5px #231f20;
     -webkit-box-shadow: 4px 0 5px #231f20;
     box-shadow: 4px 0 5px #231f20;
-    
 }
 .kl_highlight-left .title {
     margin-bottom: 50px;
@@ -1554,6 +1557,18 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: bold;
     line-height: 1.418;
     margin-bottom: 20px;
+}
+.kl_sty_description p span {
+    display: block;
+}
+.kl_sty_description p i {
+    font-size: 12.5px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+.kl_sty_description p img {
+    display: block;
+    margin: 0 auto;
 }
 .kl_sty_description p:last-child {
     margin-bottom: 0;
@@ -1577,6 +1592,13 @@ h1, h2, h3, h4, h5, h6, p {
     position: relative;
     bottom: -60px;
     right: -55px;
+}
+.table-customize td:first-child {
+    background: #c00000;
+    width: 25%;
+}
+.table-customize td {
+    font-weight: bold;
 }
 
 .kl_clip_frame {
@@ -1602,10 +1624,9 @@ h1, h2, h3, h4, h5, h6, p {
     position: relative;
 }
 .kl_highlight .kl_content .kl_clip_frame_text {
-    padding: 20px;
-    overflow: hidden;
+    padding: 10px 20px 20px;
     text-align: justify;
-    max-height: 300px;
+    max-height: 100%;
     overflow: hidden;
     overflow-y: scroll;
 }
@@ -2001,6 +2022,9 @@ h1, h2, h3, h4, h5, h6, p {
         text-align: center;
         margin-bottom: 20px;
     }
+    .kl_highlight {
+        display: block;
+    }
     .kl_highlight-left,
     .kl_highlight-center {
         width: 100%;
@@ -2029,7 +2053,7 @@ h1, h2, h3, h4, h5, h6, p {
         content: url(../images/Girl_highligh_mobile.png);
         position: absolute;
         right: -30px;
-        bottom: -30px;
+        bottom: -60px;
     }
     .kl_event,
     .kl_artist,
@@ -2045,6 +2069,7 @@ h1, h2, h3, h4, h5, h6, p {
     .kl_artist .kl_content,
     .kl_bonus_game {
         width: auto;
+        height: auto;
     }
     .kl_event .kl_content .kl_gif {
         display: none;
@@ -2056,6 +2081,10 @@ h1, h2, h3, h4, h5, h6, p {
     .kl_event .kl_content .kl_main_text,
     .kl_artist .kl_content .kl_main_text {
         padding: 10px;
+        height: 72vh;
+    }
+    .kl_artist .kl_content .kl_main_text {
+        height: 75vh;
     }
     .kl_artist .kl_content .kl_gif {
         display: none;
