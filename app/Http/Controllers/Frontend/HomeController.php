@@ -10,6 +10,7 @@ use App\Models\Settings;
 use App\Models\Gift;
 use App\Models\GiftCode;
 use App\Models\Customer;
+use App\Models\Contact;
 
 use Response;
 use Helper, File, Session, Auth, Hash, Mail;
@@ -173,6 +174,17 @@ class HomeController extends Controller
         $dataArr['type'] = 1;
         Customer::create($dataArr);   
         return json_encode(['success' => 1]);     
+    }
+    public function sendContact3(Request $request){
+        $dataArr = $request->all();
+        $rs = Contact::where('phone', $dataArr['phone'])->where('route', $dataArr['route'])->get()->count();
+        if($rs == 0){   
+            Contact::create($dataArr);   
+            return json_encode(['success' => 1]);     
+        }else{
+            return json_encode(['success' => 0, 'mess' => 'Số điện thoại đã đăng ký']);     
+        }
+        
     }
 	 public function sendContact2(Request $request){
         $dataArr = $request->all();  

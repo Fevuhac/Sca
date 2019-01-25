@@ -25,24 +25,24 @@
 
         if (mobile !== '') {
             if (vnf_regex.test(mobile) == false) {
-                obj.next().html('Sá»‘ Ä‘iá»‡n thoáº¡i khĂ´ng há»£p lá»‡.').show();
+                obj.next().html('Số điện thoại không hợp lệ.').show();
                 return false;
             } else {
                 obj.next().hide();
                 return true;
             }
         } else {
-            obj.next().html('Vui lĂ²ng nháº­p sá»‘ Ä‘iá»‡n thoáº¡i.').show();
+            obj.next().html('Vui lòng nhập số điện thoại.').show();
             return false;
         }
     }
     function checkEmail(obj) {
         if (obj.val() == "") {
-            obj.next().html('Vui lĂ²ng nháº­p Ä‘á»‹a chá»‰ email.').show();
+            obj.next().html('Vui lòng nhập địa chỉ email.').show();
             return false;
         }
         if (!validateEmail(obj.val())) {
-            obj.next().html('Äá»‹a chá»‰ email khĂ´ng há»£p lá»‡.').show();
+            obj.next().html('Địa chỉ mail không hợp lệ.').show();
             return false;
         } else {
             obj.next().hide();
@@ -243,6 +243,58 @@
                         $("#success_video")[0].src += "&autoplay=1";
                         $("#success_video")[0].allow = "autoplay";
                         $('#btnSend2').removeAttr('disabled');
+                    }
+
+                }
+            });
+        }
+    });
+    $('.btnSend3').click(function () {
+        var error = 0;
+        var obj = $(this);
+        var form = obj.parents('form');
+        form.find('input.requireds').each(function () {
+            if ($.trim($(this).val()) == "") {
+                error++;
+                $(this).next().show();
+            } else {
+                $(this).next().hide();
+            }
+
+        });
+        form.find('select.requireds').each(function () {
+            if ($.trim($(this).val()) == "") {
+                error++;
+                $(this).next().show();
+            } else {
+                $(this).next().hide();
+            }
+
+        });
+        if (!checkEmail(form.find('#email'))) {
+            error++;
+        }
+        if (!checkPhone(form.find('#phone'))) {
+            error++;
+        }
+        if (error > 0) {
+            return false;
+        } else {
+            $('#btnSend3').attr('disabled', 'disabled');
+            $.ajax({
+                url: form.attr('action'),
+                type: 'POST',
+                data: form.serialize(),
+                dataType: 'json',
+                async: false,
+                success: function (data) {                    
+                    if (data.success == 1) {
+                        form.find('input.requireds').val('');
+                        obj.parents('.modal').modal('hide');
+                        alert('Gửi thành công.');
+                    }else{
+                        
+                        alert(data.mess);
                     }
 
                 }
