@@ -401,8 +401,14 @@
             $(this).owlCarousel(config);
         });
     });
-    $('.kl_gif_shoot .kl_banner .kl_item a').click(function () {
+    $('.kl_gif_shoot .kl_banner .kl_item a').click(function (e) {
+        e.preventDefault();
         $('html').addClass('portrait_mode_hide');
-        $('.kl_shoot_fish .kl_content').addClass('portrait_mode');
-    })
+        // $('.kl_shoot_fish .kl_content').addClass('portrait_mode');
+    });
+    $('#kl_closeshot').click(function (e) {
+        e.preventDefault();
+        $('html').removeClass('portrait_mode_hide');
+        // $('.kl_shoot_fish .kl_content').addClass('portrait_mode');
+    });
 })(jQuery); // End of use strict

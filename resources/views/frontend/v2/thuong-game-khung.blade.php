@@ -91,4 +91,11 @@
         </div>
     </div>
 </div>
+<div class="fix_gif_modal kl_mobile">
+    <div class="fix_gif_modal_box">
+        <p><img src="{{ URL::asset('assets/images/GIF/CauChucBenTrai.gif') }}" alt=""></p>
+        <p><img src="{{ URL::asset('assets/images/GIF/PhaoNoTungBung.gif') }}" alt=""></p>
+        <P><img src="{{ URL::asset('assets/images/GIF/CauChucBenPhai.gif') }}" alt=""></P>
+    </div>
+</div>
 @stop

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Tahoma';
+    src: url('Tahoma.eot');
+    src: url('Tahoma.eot?#iefix') format('embedded-opentype'),
+        url('Tahoma.woff') format('woff'),
+        url('Tahoma.otf') format('otf'),
+        url('Tahoma.ttf') format('truetype'),
+        url('iCielBrTahoma.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+

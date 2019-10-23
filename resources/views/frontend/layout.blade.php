@@ -37,7 +37,7 @@
     <![endif]-->
     {!! $settingArr['google_analystic'] !!}
 </head>
-<body @if($routeName != 'home') class="kl_child" @else id="kl_home" @endif @if($routeName == "thuong-game-khung") id="kl_bonus_game" @endif>
+<body @if($routeName != 'home') class="kl_child" @else id="kl_home" @endif @if($routeName == "thuong-game-khung") id="kl_bonus_game" @endif @if($routeName == "ban-ca") id="kl_shoot_fish" @endif>
     @include('frontend.partials.header-v2') 
     <div id="Zoom">
         @if($routeName == "home")
@@ -67,7 +67,7 @@
         </div>
     </section>
     <!-- kl_fixed -->
-    <section class="kl_Cherry-MaiVang">
+    <section class="kl_Cherry-MaiVang kl_desktop">
         <img src="{{ URL::asset('assets/images/GIF/Cherry-MaiVang.png') }}" alt="Mai vàng">
     </section>
     @endif
@@ -77,7 +77,7 @@
         <img src="{{ URL::asset('assets/images/Cherry-MaiVang.png') }}" alt="Mai vàng">
     </section>
     <section class="kl_Cherry-MaiVang2 kl_mobile">
-        <img src="{{ URL::asset('assets/images/maivang2.gif') }}" alt="Hoa mai">
+        <img src="{{ URL::asset('assets/images/Cherry-MaiVang2.png') }}" alt="Hoa mai">
     </section>
     <!-- kl_Cherry-MaiVang -->
     <section class="kl_Gril kl_desktop">

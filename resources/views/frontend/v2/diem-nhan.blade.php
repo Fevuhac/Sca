@@ -9,10 +9,8 @@
                     <span class="kl_desktop"><img src="{{ URL::asset('assets/images/title_highlight.png') }}" alt="Về chương trình KLUCKY - sự kiện đặc biệt"></span>
                     <span class="kl_mobile"><img src="{{ URL::asset('assets/images/title_highlight_mb.png') }}" alt="Về chương trình KLUCKY - sự kiện đặc biệt"></span>
                 </h2>
-                <div class="kl_sty_description">
-                    <p>
-                        {!! $content1['content'] !!}
-                    </p>
+                <div class="kl_sty_description">                    
+                    {!! $content1['content'] !!}
                 </div>
                 <div class="kl_btn2 kl_btn_bird text-right">
                     <a href="{{ route('su-kien-hot') }}" title="SỰ KIỆN HOT">
@@ -23,17 +21,17 @@
         </div>
         <div class="kl_highlight-center">
             <div class="highlight-center-content">
-                <div class="kl_clip_frame">
-                    <div class="box">
-                        <iframe src="https://www.youtube.com/embed/ytgGnSH8gkw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
                 <div class="kl_content">
                     <div class="kl_clip_frame_text">
+                        <div class="kl_clip_frame">
+                            <div class="box">
+                                <iframe src="https://www.youtube.com/embed/ytgGnSH8gkw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
                         <div class="kl_sty_description">
                             <p>
-                                <img src="{{ URL::asset('assets/images/heighlight1.jpg') }}" style="float: left; margin-right: 20px;" alt="">
+                                <img src="{{ URL::asset('assets/images/heighlight1.jpg') }}" style="float: left;margin-right: 20px;width: 50%;" alt="">
                                 Sự kiện Quay Số Đổi Thưởng tại website quaysodoithuong.com được tổ chức từ ngày 15/11/2018 đã nhận được sự tham gia
                                 nhiệt tình của các thành viên tại K8 cũng như những thành viên mới đến với K8 trong thời gian vừa qua. Một sự kiện
                                 thành công tốt đẹp với hơn 8000 số may mắn được cấp và hơn 1500 giải thưởng được trao tay thành công cho các thành viên

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'iCielBrandonText';
+    src: url('iCielBrandonText-Bold.eot');
+    src: url('iCielBrandonText-Bold.eot?#iefix') format('embedded-opentype'),
+        url('iCielBrandonText-Bold.woff2') format('woff2'),
+        url('iCielBrandonText-Bold.woff') format('woff'),
+        url('iCielBrandonText-Bold.ttf') format('truetype'),
+        url('iCielBrandonText-Bold.svg#iCielBrandonText-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
